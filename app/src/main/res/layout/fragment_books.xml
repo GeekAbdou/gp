@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="adapter"
+            type="com.example.booksaplicationkotlin.ui.screens.allbooks.view.BooksAdapter" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".books.allbooks.view.BooksFragment">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/book_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/arrow_back"
+            app:title="Books"/>
+
+        <com.mancj.materialsearchbar.MaterialSearchBar
+            android:id="@+id/book_searchbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/book_toolbar"
+            app:mt_roundedSearchBarEnabled="true"
+            app:mt_searchBarColor="#F1EEEE"
+            app:mt_maxSuggestionsCount="10"
+            android:padding="10dp"
+            app:mt_placeholder="Search Here"
+            />
+
+        <ProgressBar
+            android:id="@+id/all_book_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/book_searchbar" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/books_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:setAdapter="@{adapter}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/book_searchbar"
+            tools:listitem="@layout/book_item" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

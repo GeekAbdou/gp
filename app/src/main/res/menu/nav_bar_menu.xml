@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"
+        android:checkable="true"/>
+    <item
+        android:id="@+id/gradResearches"
+        android:icon="@drawable/ic_post_grad_researches"
+        android:title="@string/post_graduate_researches"
+        android:checkable="true"
+
+        />
+    <item
+        android:id="@+id/graduationProjectsFragment"
+        android:icon="@drawable/ic_graduation_project"
+        android:title="@string/graduation_projects"
+        android:checkable="true"/>
+    <item
+        android:id="@+id/booksFragment"
+        android:icon="@drawable/ic_books"
+        android:title="@string/books"
+        android:checkable="true"/>
+    <item
+        android:id="@+id/examsFragment"
+        android:icon="@drawable/ic_exam"
+        android:title="@string/exams"
+        android:checkable="true"
+        />
+
+</menu>

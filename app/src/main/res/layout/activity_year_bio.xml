@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/firstyear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/buttonbackground"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="First Year"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.321"
+            app:layout_editor_absoluteX="24dp"
+            />
+
+
+        <Button
+            android:id="@+id/secondyear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/buttonbackground"
+            android:padding="20dp"
+            android:text="Second Year"
+            app:layout_constraintTop_toBottomOf="@id/firstyear"
+            />
+
+        <Button
+            android:id="@+id/thired"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/buttonbackground"
+            android:padding="20dp"
+            android:text="Thired Year"
+            app:layout_constraintStart_toStartOf="@id/secondyear"
+            app:layout_constraintTop_toBottomOf="@id/secondyear"
+            />
+
+        <Button
+            android:id="@+id/fourth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/buttonbackground"
+            android:padding="20dp"
+            android:text="Forth Year"
+            app:layout_constraintStart_toStartOf="@id/secondyear"
+            app:layout_constraintTop_toBottomOf="@id/thired"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

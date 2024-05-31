@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.readx.ui.screens.graduation_projects.graduation_project_details.GraduationProjectDetailsViewModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_GPname_holder"
+        android:layout_width="match_parent"
+        android:layout_height="660dp"
+        android:layout_margin="@dimen/smallMargin8"
+        app:cardBackgroundColor="@color/white"
+        app:cardPreventCornerOverlap="false">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/graduation_research_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_graduation_project_name"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="@dimen/mediumMargin16"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:background="@drawable/text_background"
+
+                android:maxLines="1"
+                android:text="@{viewModel.state.item.graduationProjectName}"
+                android:textAppearance="?attr/textAppearanceTitleLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="project name" />
+            <ProgressBar
+                android:id="@+id/all_book_progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:showLoading="@{viewModel.state.loading}" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_graduation_project_auther"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/smallMargin8"
+                android:layout_marginTop="@dimen/mediumMargin16"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:text="@string/author"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textSize="@dimen/largeFont18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_graduation_project_name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_graduation_project_authername"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="@dimen/smallMargin8"
+                android:background="@drawable/text_background"
+                android:maxLines="1"
+                android:paddingStart="@dimen/smallMargin4"
+                android:text="@{viewModel.state.item.authorName}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_graduation_project_auther"
+                tools:text="auther name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_graduation_project_description"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/smallMargin8"
+                android:layout_marginTop="@dimen/smallMargin8"
+
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:text="description"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textSize="@dimen/largeFont18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_graduation_project_authername" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_graduation_project_description_details"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="@dimen/smallMargin8"
+                android:background="@drawable/text_background"
+                android:maxLines="5"
+                android:paddingStart="@dimen/smallMargin4"
+
+                android:text="@{viewModel.state.item.graduationProjectDescription}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_graduation_project_description"
+                tools:text="description details" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_graduation_project_supervisor"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/smallMargin8"
+                android:layout_marginTop="@dimen/smallMargin8"
+
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:text="supervisor"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textSize="@dimen/largeFont18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_graduation_project_description_details" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_graduation_project_supervisor_dr_name"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="@dimen/smallMargin8"
+                android:background="@drawable/text_background"
+                android:maxLines="1"
+
+                android:paddingStart="@dimen/smallMargin4"
+                android:text="@{viewModel.state.item.professorName}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_graduation_project_supervisor"
+                tools:text="supervisor dr" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_graduation_project_supervisor_ta_name"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="@dimen/smallMargin8"
+                android:background="@drawable/text_background"
+                android:maxLines="1"
+                android:paddingStart="@dimen/smallMargin4"
+
+                android:text="@{viewModel.state.item.teachingAssistantName}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_graduation_project_supervisor_dr_name"
+                tools:text="supervisor ta" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_graduation_project_field"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/smallMargin8"
+                android:layout_marginTop="@dimen/smallMargin8"
+
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:text="field"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textSize="@dimen/largeFont18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_graduation_project_supervisor_ta_name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_graduation_project_field_details"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="@dimen/smallMargin8"
+                android:background="@drawable/text_background"
+                android:maxLines="1"
+                android:paddingStart="@dimen/smallMargin4"
+
+
+                android:text="@{viewModel.state.item.field}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_graduation_project_field"
+                tools:text="field details" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_graduation_project_faculty"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/smallMargin8"
+                android:layout_marginTop="@dimen/smallMargin8"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+
+                android:text="faculty"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textSize="@dimen/largeFont18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_graduation_project_field_details" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_graduation_project_faculty_details"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="@dimen/smallMargin8"
+                android:background="@drawable/text_background"
+                android:maxLines="1"
+                android:paddingStart="@dimen/smallMargin4"
+
+                android:text="@{viewModel.state.item.facultyName}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_graduation_project_faculty"
+                tools:text="faculty details" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_graduation_project_year"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/smallMargin8"
+                android:layout_marginTop="@dimen/smallMargin8"
+
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:text="year"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textSize="@dimen/largeFont18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_graduation_project_faculty_details" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_graduation_project_year_details"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="@dimen/smallMargin8"
+                android:background="@drawable/text_background"
+                android:maxLines="1"
+                android:paddingStart="@dimen/smallMargin4"
+
+                android:text="@{viewModel.state.item.year}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_graduation_project_year"
+                tools:text="year details" />
+
+            <View
+                android:id="@+id/view_stroke"
+                android:layout_width="5dp"
+                android:layout_height="0dp"
+                android:background="@color/primaryColor"
+                app:layout_constraintBottom_toBottomOf="@id/graduation_research_card"
+                app:layout_constraintStart_toStartOf="@id/graduation_research_card"
+                app:layout_constraintTop_toTopOf="@id/graduation_research_card" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</layout>

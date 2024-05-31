@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/firstyear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/buttonbackground"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="First Year"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.321"
+            app:layout_editor_absoluteX="24dp" />
+
+
+        <Button
+            android:id="@+id/secondyear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/buttonbackground"
+            android:padding="20dp"
+            android:text="Second Year"
+            app:layout_constraintTop_toBottomOf="@id/firstyear" />
+
+        <Button
+            android:id="@+id/thiredcs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/buttonbackground"
+            android:padding="10dp"
+            android:text="Thired Year CS"
+            app:layout_constraintStart_toStartOf="@id/secondyear"
+            app:layout_constraintTop_toBottomOf="@id/secondyear"
+            app:layout_constraintEnd_toStartOf="@id/thiredis" />
+        <!--        app:layout_weight="1"-->
+
+
+        <Button
+            android:id="@+id/thiredis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/buttonbackground"
+            android:padding="10dp"
+            android:text="Thired Year IS"
+            app:layout_constraintTop_toBottomOf="@id/secondyear"
+            app:layout_constraintEnd_toEndOf="@id/secondyear"
+            app:layout_constraintStart_toEndOf="@id/thiredcs" />
+        <!--        app:layout_weight="1"-->
+
+
+        <Button
+            android:id="@+id/fourthcs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/buttonbackground"
+            android:padding="10dp"
+            android:text="Forth Year CS"
+            app:layout_constraintStart_toStartOf="@id/secondyear"
+            app:layout_constraintTop_toBottomOf="@id/thiredcs"
+            app:layout_constraintEnd_toStartOf="@+id/forthis" />
+        <!--        app:layout_weight="1"-->
+
+
+        <Button
+            android:id="@+id/forthis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/buttonbackground"
+            android:padding="10dp"
+            android:text="Forth Year IS"
+            app:layout_constraintTop_toBottomOf="@id/thiredis"
+            app:layout_constraintEnd_toEndOf="@id/secondyear"
+            app:layout_constraintStart_toEndOf="@id/fourthcs" />
+        <!--        app:layout_weight="1"-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

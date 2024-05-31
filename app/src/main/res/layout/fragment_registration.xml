@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.readx.ui.screens.registration.RegistrationViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.screens.signup.SignupFragment">
+
+
+        <ImageView
+            android:id="@+id/image_logo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mediumMargin16" />
+
+        <EditText
+            android:id="@+id/edit_txt_firstname"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="@dimen/smallMargin4"
+            android:background="@drawable/rounded_background"
+            android:hint="Enter your first name"
+            android:text="@={viewModel.state.firstName}"
+            />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/smallMargin4" />
+
+        <EditText
+            android:id="@+id/edit_txt_last_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="@dimen/smallMargin4"
+            android:background="@drawable/rounded_background"
+            android:hint="Enter your last name"
+
+            android:text="@={viewModel.state.lastName}"
+
+            />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/smallMargin4" />
+
+        <EditText
+            android:id="@+id/edit_txt_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="@dimen/smallMargin4"
+            android:background="@drawable/rounded_background"
+            android:hint="Enter your email"
+
+            android:text="@={viewModel.state.email}"/>
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/smallMargin4" />
+
+        <EditText
+            android:id="@+id/edit_txt_Id"
+            android:layout_width="match_parent"
+
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="@dimen/smallMargin4"
+            android:background="@drawable/rounded_background"
+            android:hint="Enter your ID"
+
+            android:text="@={viewModel.state.studentId}"/>
+
+        <EditText
+            android:id="@+id/edit_txt_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_background"
+            android:hint="Enter password"
+
+            android:text="@={viewModel.state.password}"/>
+
+
+
+        <EditText
+            android:id="@+id/edit_txt_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_background"
+            android:hint="Confirm password"
+            android:padding="@dimen/smallMargin4"
+
+            android:text="@={viewModel.state.passwordConfirmation}"/>
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/smallMargin8" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_signup"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="@dimen/smallMargin8"
+            android:backgroundTint="@color/primaryColor"
+            android:onClick="@{()->viewModel.signup()}"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:text="Sign up"
+            android:textSize="@dimen/mediumFont16"
+            app:cornerRadius="10dp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Already have an account? "
+                android:textColor="@color/blackFont"
+                android:textSize="@dimen/smallFont14" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log in"
+                android:onClick="@{()->viewModel.navToLogin()}"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/smallFont14" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</layout>

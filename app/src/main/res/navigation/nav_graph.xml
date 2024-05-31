@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/booksFragment"
+        android:name="com.example.booksaplicationkotlin.ui.screens.allbooks.view.BooksFragment"
+        android:label="BooksFragment">
+        <action
+            android:id="@+id/action_booksFragment_to_bookDetailsFragment"
+            app:destination="@id/bookDetailsFragment" />
+        <action
+            android:id="@+id/action_booksFragment_to_searchBookFragment"
+            app:destination="@id/searchBookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookDetailsFragment"
+        android:name="com.example.booksaplicationkotlin.ui.screens.allbooks.view.BookDetailsFragment"
+        android:label="BookDetailsFragment">
+        <argument
+            android:name="book"
+            app:argType="com.example.booksaplicationkotlin.model.Record" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchBookFragment"
+        android:name="com.example.booksaplicationkotlin.ui.screens.allbooks.view.SearchBookFragment"
+        android:label="SearchBookFragment">
+        <action
+            android:id="@+id/action_searchBookFragment_to_bookDetailsFragment"
+            app:destination="@id/bookDetailsFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.booksaplicationkotlin.ui.screens.home.HomeFragment"
+        android:label="HomeFragment">
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_graduationProjectsFragment"
+            app:destination="@id/graduationProjectsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_booksFragment"
+            app:destination="@id/booksFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_fragment_Post_Graduation_research_item"
+            app:destination="@id/gradResearches" />
+        <action
+            android:id="@+id/action_homeFragment_to_fragment_general_bio"
+            app:destination="@id/examsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.readx.ui.screens.login.LoginFragment"
+        android:label="LoginFragment">
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.readx.ui.screens.registration.RegistrationFragment"
+        android:label="RegistrationFragment">
+        <action
+            android:id="@+id/action_registrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registrationFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/graduationProjectsFragment"
+        android:name="com.example.readx.ui.screens.graduation_projects.GraduationProjectsFragment"
+        android:label="GraduationProjectsFragment" >
+        <action
+            android:id="@+id/action_graduationProjectsFragment_to_searchProjectFragment"
+            app:destination="@id/searchProjectFragment" />
+        <action
+            android:id="@+id/action_graduationProjectsFragment_to_GPDetailsFragment"
+            app:destination="@id/GPDetailsFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fragmetn_Post_Graduation_research_item_details"
+        android:name="com.example.myapplicationresearch.GraduationResearch.GraduationResearchDetails"
+        android:label="Fragmetn_Post_Graduation_research_item_details"
+        tools:layout="@layout/post_graduate_research_details" />
+    <fragment
+        android:id="@+id/gradResearches"
+        android:name="com.example.myapplicationresearch.GraduationResearch.GraduationResearchFragment"
+        android:label="Fragment_Post_Graduation_research_item"
+        tools:layout="@layout/post_graduate_research">
+        <action
+            android:id="@+id/action_fragment_Post_Graduation_research_item_to_fragmetn_Post_Graduation_research_item_details"
+            app:destination="@id/fragmetn_Post_Graduation_research_item_details" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/examsFragment"
+        android:name="com.example.myapplicationfinal.fragmentGeneralBio"
+        android:label="fragment_general_bio"
+        tools:layout="@layout/activity_genral_bio">
+        <action
+            android:id="@+id/action_fragment_general_bio_to_fragment_YearGenral"
+            app:destination="@id/fragment_YearGenral" />
+        <action
+            android:id="@+id/action_fragment_general_bio_to_fragment_Yearbio"
+            app:destination="@id/fragment_Yearbio" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_YearGenral"
+        android:name="com.example.myapplicationfinal.fragmentYearGenral"
+        android:label="fragment_YearGenral"
+        tools:layout="@layout/activity_year_general">
+        <action
+            android:id="@+id/action_fragment_YearGenral_to_fragment_subject1"
+            app:destination="@id/fragment_subject1" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Yearbio"
+        android:name="com.example.myapplicationfinal.fragmentYearBio"
+        android:label="fragment_Yearbio"
+        tools:layout="@layout/activity_year_bio">
+        <action
+            android:id="@+id/action_fragment_Yearbio_to_fragment_biosubject"
+            app:destination="@id/fragment_biosubject" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_subject1"
+        android:name="com.example.myapplicationfinal.fragmentGenralSubject"
+        android:label="fragment_subject1"
+        tools:layout="@layout/activity_subject">
+        <action
+            android:id="@+id/action_fragment_subject1_to_fragment_exam"
+            app:destination="@id/fragment_exam" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_exam"
+        android:name="com.example.myapplicationfinal.fragmentExam"
+        android:label="fragment_exam"
+        tools:layout="@layout/activity_exam">
+        <action
+            android:id="@+id/action_fragment_exam_to_fragmetn_details_exam"
+            app:destination="@id/fragmetn_details_exam" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmetn_details_exam"
+        android:name="com.example.myapplicationfinal.fragmetnDetailsExam"
+        android:label="fragmetn_details_exam"
+        tools:layout="@layout/activity_details_exam"/>
+    <fragment
+        android:id="@+id/fragment_biosubject"
+        android:name="com.example.myapplicationfinal.fragmentBioSubject"
+        android:label="fragment_biosubject" >
+        <action
+            android:id="@+id/action_fragment_biosubject_to_fragment_exam"
+            app:destination="@id/fragment_exam" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchProjectFragment"
+        android:name="com.example.booksaplicationkotlin.ui.screens.graduation_projects.search.SearchProjectFragment"
+        android:label="SearchProjectFragment" >
+        <action
+            android:id="@+id/action_searchProjectFragment_to_GPDetailsFragment"
+            app:destination="@id/GPDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/GPDetailsFragment"
+        android:name="com.example.booksaplicationkotlin.ui.screens.graduation_projects.gp_details.GPDetailsFragment"
+        android:label="GPDetailsFragment" >
+        <argument
+            android:name="gradProject"
+            app:argType="com.example.booksaplicationkotlin.model.GradProject" />
+    </fragment>
+    <fragment
+        android:id="@+id/graduationProjectsViewallFragment"
+        android:name="com.example.readx.ui.screens.graduation_projects.projects_viewall.GraduationProjectsViewallFragment"
+        android:label="GraduationProjectsViewallFragment" >
+        <action
+            android:id="@+id/action_graduationProjectsViewallFragment_to_GPDetailsFragment"
+            app:destination="@id/GPDetailsFragment" />
+    </fragment>
+</navigation>

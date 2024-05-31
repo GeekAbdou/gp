@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_name_PGR_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/smallMargin8"
+        app:cardBackgroundColor="@color/white"
+        app:cardPreventCornerOverlap="false">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/post_graduation_research_card_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_post_graduate_research_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/mediumMargin16"
+                android:layout_marginStart="16dp"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                tools:text="post graduate research name" />
+
+            <View
+                android:id="@+id/view_stroke1"
+                android:layout_width="5dp"
+                android:layout_height="0dp"
+                android:background="@color/mainColor"
+                app:layout_constraintBottom_toBottomOf="@id/post_graduation_research_card_details"
+                app:layout_constraintStart_toStartOf="@id/post_graduation_research_card_details"
+                app:layout_constraintTop_toTopOf="@id/post_graduation_research_card_details" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_PGR_holder_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/smallMargin8"
+        app:cardBackgroundColor="@color/white"
+        app:cardPreventCornerOverlap="false"
+
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/post_graduation_research_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_auther"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="@dimen/mediumMargin16"
+                android:layout_marginEnd="@dimen/smallMargin8"
+                android:maxLines="1"
+                tools:text="Author"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                app:layout_constraintEnd_toStartOf="@id/image_star"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_auther_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallMargin8"
+                android:layout_marginStart="12dp"
+                android:drawablePadding="@dimen/smallMargin4"
+                android:maxLines="2"
+                tools:text="Prof : Ebtesam"
+                app:layout_constraintTop_toBottomOf="@id/text_view_auther"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/image_star"
+                />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="@dimen/smallMargin8"
+                android:layout_marginEnd="@dimen/smallMargin8"
+                android:maxLines="1"
+                tools:text="Description"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                app:layout_constraintEnd_toStartOf="@id/image_star"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_auther_name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_post_graduate_research_desc_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallMargin8"
+                android:drawablePadding="@dimen/smallMargin4"
+                android:maxLines="5"
+                tools:text="descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription"
+
+
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?android:attr/textColorSecondary"
+                app:layout_constraintEnd_toStartOf="@id/image_star"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/text_view_auther"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_description" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_supervisors"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="@dimen/smallMargin8"
+                android:layout_marginEnd="@dimen/smallMargin8"
+                android:maxLines="1"
+                tools:text="Supervisors"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                app:layout_constraintEnd_toStartOf="@id/image_star"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_post_graduate_research_desc_text" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_supervisor_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallMargin8"
+                android:drawablePadding="@dimen/smallMargin4"
+                android:maxLines="5"
+                tools:text="Dr : Essam Haleam
+                   \n Dr : Essam Haleam  "
+
+
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?android:attr/textColorSecondary"
+                app:layout_constraintEnd_toStartOf="@id/image_star"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/text_view_auther"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_supervisors" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="@dimen/smallMargin8"
+                android:layout_marginEnd="@dimen/smallMargin8"
+                android:maxLines="1"
+                tools:text="Field"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                app:layout_constraintEnd_toStartOf="@id/image_star"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_supervisor_name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_field_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallMargin8"
+                android:drawablePadding="@dimen/smallMargin4"
+                android:maxLines="5"
+                tools:text="Software engineering "
+
+
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?android:attr/textColorSecondary"
+                app:layout_constraintEnd_toStartOf="@id/image_star"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/text_view_auther"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_field" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_faculty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="@dimen/smallMargin8"
+                android:layout_marginEnd="@dimen/smallMargin8"
+                android:maxLines="1"
+                tools:text="Faculty"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                app:layout_constraintEnd_toStartOf="@id/image_star"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_field_name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_faculty_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallMargin8"
+                android:drawablePadding="@dimen/smallMargin4"
+                android:maxLines="5"
+                tools:text="Computers and information minia university "
+
+
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?android:attr/textColorSecondary"
+                app:layout_constraintEnd_toStartOf="@id/image_star"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/text_view_auther"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_faculty" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_year"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="@dimen/smallMargin8"
+                android:layout_marginEnd="@dimen/smallMargin8"
+                android:maxLines="1"
+                tools:text="Year"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                app:layout_constraintEnd_toStartOf="@id/image_star"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_faculty_name" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_year_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallMargin8"
+                android:drawablePadding="@dimen/smallMargin4"
+                android:maxLines="5"
+                tools:text=" 2013/2014"
+
+
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?android:attr/textColorSecondary"
+                app:layout_constraintEnd_toStartOf="@id/image_star"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/text_view_auther"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_year" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <ImageView
+                android:id="@+id/image_star"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="@dimen/smallMargin8"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/star_border" />
+
+            <View
+                android:id="@+id/view_stroke"
+                android:layout_width="5dp"
+                android:layout_height="0dp"
+                android:background="@color/mainColor"
+                app:layout_constraintBottom_toBottomOf="@id/post_graduation_research_card"
+                app:layout_constraintStart_toStartOf="@id/post_graduation_research_card"
+                app:layout_constraintTop_toTopOf="@id/post_graduation_research_card" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+</layout>
+
